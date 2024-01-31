@@ -68,7 +68,7 @@ function Quize(props) {
                 headers: {
                     'Content-Type': 'application/json',
                     Accept: "application/json",
-                    "Access-Control-Allow-Origin": "*",
+                   
                 },
                 body: JSON.stringify({
                     quizName: props.quizData?.quizName,
