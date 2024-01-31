@@ -13,43 +13,33 @@ function Login() {
     function validateEmail(email) {
         return emailRegex.test(email);
     }   
-    const handelSubmit = async (event) => {
-        event.preventDefault();
-        if (!validateEmail(email) || password.length === 0) {
-            setError(true);
-        }else  {             
-            try  {
-                console.log("handleSignIn")
-            const response  =  await fetch('http://it-amitverma-server.vercel.app/api/loginUser', {
-                method: 'POST',
-                crossDomain: true,
-                headers: {
-                    'Content-Type': 'application/json',
-                    Accept: "application/json",
-                    "Access-Control-Allow-Origin": "*",
-                }, body: JSON.stringify({
-                    email,
-                    password,
-                }),
-                })
-                    .then((res) => res.json())
-                    .then((respose) => {
-                        console.log(respose, "user-Login")
-                        if (respose.status === "SUCCESS") {                            
-                            localStorage.setItem("token", respose.jwtToken);
-                            localStorage.setItem("email", respose.email);
-                            navigate('/dashboardhome')
-                        }else{
-                            setApiError(respose)
-                        }
-                    })                
-            } catch (error) {
-                console.log(error)
-                console.error('Error error login:', error.message);
-                setResponse('Error login user. Please try again.');
-            };
-        };
+     const response = await axios.post('http://it-amitverma-server.vercel.app/api/loginUser', {
+        email,
+        password,
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+          
+        },
+      });
+
+      console.log(response.data, 'user-Login');
+
+      if (response.data.status === 'SUCCESS') {
+        localStorage.setItem('token', response.data.jwtToken);
+        localStorage.setItem('email', response.data.email);
+        navigate('/dashboardhome');
+      } else {
+        setApiError(response.data);
+      }
+    } catch (error) {
+      console.log(error);
+      console.error('Error error login:', error.message);
+      setResponse('Error login user. Please try again.');
     }
+  }
+};
 
     return (
         <>
