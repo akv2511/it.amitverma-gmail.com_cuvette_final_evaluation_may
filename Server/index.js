@@ -114,28 +114,6 @@ app.post('/api/createQuiz', async (req, res) => {
 });
 
 
-// app.post('/api/createQuiz', async (req, res) => {
-//   // console.log("quiz data", req.body)
-//   try {
-//     await Quiz.create(
-//       req.body
-//     );
-//     res.json({
-//       status: "SUCCESS",
-//       message: `${Quiz._id}Data upload sucessfully`,
-      
-//     });
-//   } catch (error) {
-//     console.log("error in server", error);
-//     res.status(500).json({
-//       status: 'FAILED',
-//       message: 'Something went wrong',
-//       error
-//     });
-//   }
-// });
-
-
 
 app.get('/api/quiz', async (req, res) => {
   try {
