@@ -10,7 +10,7 @@ const app = express();
 app.use(cors(
   {
     credentials: true,
-    origin: "http://it-amitverma-gmail-com-cuvette-final-evaluation-may.vercel.app",
+    origin: "https://it-amitverma-gmail-com-cuvette-final-evaluation-may.vercel.app",
     allowedHeaders: ["Content-Type", "Authorization", "other-header"],
   }
   
