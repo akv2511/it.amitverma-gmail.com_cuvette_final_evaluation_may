@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const cookieParser = require('cookie-parser');
+
 const dotenv = require('dotenv');
 dotenv.config();
 const bcrypt = require('bcryptjs');
@@ -15,7 +15,7 @@ app.use(cors(
   }
   
 ));
-app.use(cookieParser());
+
 app.use(express.json());
 const User = require("./users");
 const Quiz = require("./QuizModel")
