@@ -19,7 +19,7 @@ function DashboardHome() {
     useEffect(() => {
       // Fetch data from the server
       if(refresh===true){
-        axios.get(`http://localhost:4000/api/quiz?email=${localStorage.getItem("email")}`)
+        axios.get(`http://it-amitverma-server.vercel.app/api/quiz?email=${localStorage.getItem("email")}`)
         .then(response => {
           setQuizData(response.data);
           setRefresh(false);
