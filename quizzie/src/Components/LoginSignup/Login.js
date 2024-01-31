@@ -20,19 +20,20 @@ function Login() {
         } else {
             try {
                 console.log("handleSignIn")
-                await axios.post("/login", { email, password })
-                    .then((res) => res.json())
-                    .then((respose) => {
-                        console.log(respose, "user-Login")
-                        if (respose.status === "SUCCESS") {
-                            localStorage.setItem("token", respose.jwtToken);
-                            localStorage.setItem("email", respose.email);
-                            navigate('/dashboardhome')
-                        } else {
-                            setApiError(respose)
-                        }
-                    })
-            } catch (error) {
+                const response = await axios.post("/login", { email, password });
+                    // .then((res) => res.json())
+                    // .then((respose) => {
+                    //     console.log(respose, "user-Login")
+                    //     if (respose.status === "SUCCESS") {
+                    //         localStorage.setItem("token", respose.jwtToken);
+                    //         localStorage.setItem("email", respose.email);
+                    //         navigate('/dashboardhome')
+                    //     } else {
+                    //         setApiError(respose)
+                    //     }
+                    // })
+            } 
+            catch (error) {
                 console.log(error)
                 console.error('Error error login:', error.message);
                 setResponse('Error login user. Please try again.');
