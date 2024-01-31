@@ -20,7 +20,7 @@ function Login() {
         } else {
             try {
                 console.log("handleSignIn")
-                const response = await axios.get("/login", { email, password });
+                const response = await axios.post("/loginUser", { email, password });
                     // .then((res) => res.json())
                     // .then((respose) => {
                     //     console.log(respose, "user-Login")
