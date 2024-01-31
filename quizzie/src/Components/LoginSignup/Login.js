@@ -1,7 +1,7 @@
 import styles from './Login.module.css';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+
 function Login() {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
@@ -20,7 +20,7 @@ function Login() {
         }else  {             
             try  {
                 console.log("handleSignIn")
-            const response  =  await axios.post('http://it-amitverma-server.vercel.app/api/loginUser', {
+            const response  =  await fetch('http://it-amitverma-server.vercel.app/api/loginUser', {
                 method: 'POST',
                 crossDomain: true,
                 headers: {
