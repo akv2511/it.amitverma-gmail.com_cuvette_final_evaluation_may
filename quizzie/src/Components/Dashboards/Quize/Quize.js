@@ -62,7 +62,7 @@ function Quize(props) {
     const handelSubmitQuestion = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:4000/api/createQuiz', {
+            const response = await fetch('http://it-amitverma-server.vercel.app/api/createQuiz', {
                 method: 'POST',
                 crossDomain: true,
                 headers: {
