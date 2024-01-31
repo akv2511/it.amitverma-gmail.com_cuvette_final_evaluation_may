@@ -1,8 +1,12 @@
+import axios from "axios";
+import React from "react";
 import CongratulationPage from "./Components/QuizInterface/CongratulationPage";
 import QuestionAnswerPage from "./Components/QuizInterface/QuestionAnswerPage";
 import DashboardHome from "./Components/QuizzieDashboard/DashboardHome";
 import Home from "./Components/QuizzieHome/Home";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+axios.defaults.baseURL = "https://musicart-server.vercel.app/api";
+axios.defaults.withCredentials = true;
 function App() {
   return (
     <BrowserRouter>
