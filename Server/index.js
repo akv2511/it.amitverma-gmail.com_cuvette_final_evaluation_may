@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv');
 dotenv.config();
 const bcrypt = require('bcryptjs');
@@ -12,7 +13,9 @@ app.use(cors(
     origin: "http://it-amitverma-gmail-com-cuvette-final-evaluation-may.vercel.app",
     allowedHeaders: ["Content-Type", "Authorization", "other-header", "Access-Control-Allow-Origin"],
   }
+  
 ));
+app.use(cookieParser());
 app.use(express.json());
 const User = require("./users");
 const Quiz = require("./QuizModel")
@@ -112,8 +115,6 @@ app.post('/api/createQuiz', async (req, res) => {
     });
   }
 });
-
-
 
 app.get('/api/quiz', async (req, res) => {
   try {
