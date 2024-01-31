@@ -1,0 +1,150 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.dashnav {
+    width: 250px;
+    height: 695.20px;
+    /* background-color: aqua; */
+}
+
+.navheading {
+    position: relative;
+    width: 131px;
+    height: 70px;
+    top: 17px;
+    left: 15px;
+    font-family: Jomhuria;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #474444;
+
+}
+
+.buttonmid {
+    position: absolute;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 245px;
+    height: 160px;
+    top: 260px;
+    left: 0px;
+    border-radius: 10px;
+}
+
+.butdasbrd {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    border: white;
+    background-color: white;
+    color: #474444;
+}
+
+.butdasbrdslect {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    border: white;
+    background-color: white;
+    color: #474444;
+    box-shadow: 0px 0px 14px 0px #0000001F;
+
+}
+
+.butanalaty {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    border: white;
+    background-color: white;
+    color: #474444;
+}
+
+.butanalatyslect {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    border: white;
+    background-color: white;
+    color: #474444;
+    box-shadow: 0px 0px 14px 0px #0000001F;
+}
+
+.butcreatequiz {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    border: white;
+    background-color: white;
+    color: #474444;
+}
+
+.butcreatequizslect {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    border: white;
+    background-color: white;
+    color: #474444;
+    box-shadow: 0px 0px 14px 0px #0000001F;
+}
+
+.lineimg {
+    position: absolute;
+    top: 610px;
+    left: 50px;
+    border: 0px solid #000000;
+    border-radius: 1px;
+    width: 150px;
+    color: #000000;
+
+
+}
+
+.buttonlogout {
+    position: absolute;
+    bottom: 40px;
+    width: 245px;
+    left: 0px;
+    border-radius: 10px;
+    height: 30px;
+    border: white;
+    background-color: white;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #474444;
+}
+
+.butdasbrd:hover {
+    border: groove white;
+    background-color: white;
+}

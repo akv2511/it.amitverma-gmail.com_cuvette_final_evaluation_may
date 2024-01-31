@@ -1,0 +1,142 @@
+.dashboardmain {
+    position: absolute;
+    background-color: #EDEDED;
+    height: 695px;
+    width: 84%;
+    top: 0%;
+    left: 16%
+}
+
+.card {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 900px;
+    height: 140px;
+    top: 70px;
+    left: 200px;
+    border-radius: 10px;
+}
+
+.card1 {
+    height: 140px;
+    width: 250px;
+    background-color: white;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FF5D01;
+}
+
+.card2 {
+    height: 140px;
+    width: 250px;
+    background-color: white;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #60B84B;
+}
+
+.card3 {
+    height: 140px;
+    width: 250px;
+    background-color: white;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #5076FF;
+}
+
+.trendingheadng {
+    position: absolute;
+    left: 210px;
+    top: 260px;
+    color: #474444;
+}
+
+.trendingquize {
+    position: absolute;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: left;
+    height: 150px;
+    left: 200px;
+    width: 800px;
+    top: 320px;
+}
+
+.trendingquize .insidetrendingquize {
+    margin-left: 8px;
+    margin-top: 8px;
+}
+
+.insidetrendingquize {
+    position: relative;
+    background-color: white;
+    width: 181px;
+    height: 62px;
+    border-radius: 5px;
+}
+
+.heading {
+    font-family: Poppins;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.eyenumbr {
+    position: absolute;
+    top: 2%;
+    right: 15%;
+}
+
+.eyeimg {
+    position: absolute;
+    top: 5%;
+    right: 3%;
+}
+
+.date {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #60B84B;
+    margin-left: 10px;
+}
+
+.insidetrendingquize:hover {
+    border: inset grey;
+}
+
+.card1:hover {
+    border: inset red;
+}
+
+.card2:hover {
+    border: inset green;
+}
+
+.card3:hover {
+    border: inset blue;
+}

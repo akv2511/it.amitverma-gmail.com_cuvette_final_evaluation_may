@@ -1,0 +1,88 @@
+.signupmainpage {
+    position: relative;
+    padding: 0%;
+    margin: 3%;
+    width: 1066px;
+    height: 611px;
+    top: 10%;
+    left: 12%;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 30px 0px #00000026;
+
+}
+
+.heading {
+    position: absolute;
+    width: 187px;
+    height: 100px;
+    top: 3%;
+    left: 40%;
+    font-family: Jomhuria;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 100px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #474444;
+}
+
+.signupbutton {
+    position: absolute;
+    top: 28%;
+    left: 35%;
+    width: 200px;
+    height: 37px;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border: white;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    
+
+}
+
+.loginbutton {
+    position: absolute;
+    top: 28%;
+    left: 55%;
+    width: 200px;
+    height: 37px;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    border: white;
+    background-color: white;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+   
+}
+
+.signupbutton:hover {
+    background-color: #bbc7f5;
+   
+}
+
+.loginbutton:hover {
+    background-color: #bbc7f5;
+}
+.selected{
+    box-shadow: 0 0 50px 0 rgba(0,25,255,.24);
+}
+
+.form {
+    position: absolute;
+    width: 40%;
+    height: 54%;
+    top: 37%;
+    left: 31%;
+
+}

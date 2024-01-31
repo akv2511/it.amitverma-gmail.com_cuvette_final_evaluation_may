@@ -1,0 +1,249 @@
+.background {
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    backdrop-filter: blur(8px);
+}
+
+
+.popup {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    height: 65%;
+    margin: 0 auto;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.number {
+    /* width: 50vh;     */
+    /* top: 126px; */
+    /* left: 311px; */
+    background: white;
+    display: flex;
+    /* flex-direction: row;    */
+    text-align: right;
+}
+
+.addno {
+    box-shadow: 0px 0px 10px 0px #00000026;
+    width: 80px;
+    background-color: red;
+    margin-right: 8px;
+    border-radius: 50%;
+   /* text-align: center; */
+}
+
+
+
+.number img {
+    margin-left: 8px;
+    /* Added margin to the left of the image */
+}
+
+.addno {
+    cursor: pointer;    
+}
+
+.no {
+    margin: 0;
+    text-align: center;
+}
+
+.plusimg {
+    width: 30px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    top: 65px;
+    left: 95px;
+}
+.cross{
+    cursor: pointer;    
+    width: 15px;
+    height:15px;    
+}
+.input {
+    position: absolute;
+    width: 90%;
+    height: 10%;
+    top: 20%;
+    left: 5%;
+    border-radius: 10px;
+    font-family: Poppins;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.qnapollbodr {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    height: 8%;
+    /* background-color: antiquewhite; */
+    top: 32%;
+    left: 5%;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.inputtxtdiv {
+    position: absolute;
+    /* background-color: bisque; */
+    top: 40%;
+    height: 200px;
+    width: 302px;
+}
+.inputimgurldiv{
+    position: absolute;
+    /* background-color: bisque; */
+    top: 40%;
+    height: 200px;
+    width: 302px;
+}
+
+.inputtxtimgdiv {
+    position: absolute;
+    /* background-color: bisque; */
+    top: 40%;
+    height: 200px;
+    width: 480px;
+    
+
+}
+
+.inputtxt {
+    width: 279px;
+    height: 40px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 25px 0px #00000026;
+    text-align: justify;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    }
+    .inputtxtchng{
+        width: 279px;
+    height: 40px;
+    border-radius: 10px;    
+    box-shadow: 0px 0px 25px 0px #00000026;
+    text-align: justify;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    background-color: #60B84B;
+    color:white;
+    }
+    .inputrdochng{
+        background-color: #60B84B;  
+        border-color: #60B84B;
+    }
+
+.inputtxtimg {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 25px 0px #00000026;
+    text-align: justify;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.inputtxtimgchng{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;   
+    box-shadow: 0px 0px 25px 0px #00000026;
+    text-align: justify;
+    margin-left: 5px;
+    margin-right: 10px;
+    background-color: #60B84B;
+    color:white;
+}
+.timer{
+    position: absolute;    
+    width: 95px;
+    height:150px;
+    right:20px;
+    bottom: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.timertxt{
+    font-family: Poppins;
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: center;
+color: #9F9F9F;
+border: #9F9F9F;
+
+}
+.timerbutn{
+    width: 95px;
+    height: 34px;
+    top: 467px;
+    left: 864px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px #00000026;
+background-color: white;
+border: #9F9F9F;    
+}
+.timerbutnslect{
+    width: 95px;
+    height: 34px;
+    top: 467px;
+    left: 864px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px #00000026;
+    background-color:#D60000;
+    color: white;
+}
+
+.cancelbut {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 30%;
+    height: 46.14px;
+    border-radius: 10px;
+    border: white;
+color: black;
+box-shadow: 0px 0px 15px 0px #00000040;
+
+}
+.cancelbut:hover{
+    
+    color: red;
+    box-shadow: 0px 0px 15px 0px white;
+}
+
+.continuebut {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 30%;
+    height: 46.14px;
+    border-radius: 10px;
+    border: white;
+    background-color: #60B84B;
+    color: white;
+}

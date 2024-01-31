@@ -1,0 +1,61 @@
+.loginform {
+    position: relative;
+    line-height: 80px;
+}
+
+.texth1 {
+    /* position: absolute; */
+
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    color: #474444;
+    text-align: right;
+    width: 40%;
+    /* justify-content: right; */
+}
+
+.logininput {
+    position: absolute;
+    right: 10%;
+    width: 288px;
+    height: 38px;    
+    border: 0px, 0px, 2px, 0px;
+    border-radius: 10px, 10px, 0px, 0px;
+    border: white;
+    background: #F4F4F4;
+   
+}
+
+.error {
+    position: absolute;
+    color: red;
+    left: 50%;
+    margin: 10px;
+    font-family: Poppins;
+    font-size: 20px;
+}
+
+.loginbutn {
+    position: absolute;
+    width: 274px;
+    height: 38px;
+    left: 22%;
+    border-radius: 8px;
+    background: #b2beee;
+    color: whitesmoke;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+.loginbutn:hover {
+    color: white;
+    background-color: #A9BCFF;
+}

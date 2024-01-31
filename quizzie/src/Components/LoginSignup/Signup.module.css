@@ -1,0 +1,59 @@
+.signinform {
+    position: relative;
+    line-height: 80px;
+    background: #FFFFFF;
+
+
+}
+
+.labelsignup {
+    position: absolute;
+    width: 40%;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    color: #474444;
+    text-align: right;
+}
+
+.signupinput {
+    position: absolute;
+    right: 10%;
+    width: 288px;
+    height: 35px;
+    border-radius: 10px, 10px, 0px, 0px;
+    border: whitesmoke;
+    background: #F4F4F4;
+}
+
+.error {
+    position: absolute;
+    color: red;
+    left: 50%;
+    margin: 10px;
+    font-family: Poppins;
+    font-size: 20px;
+}
+
+.signbutn {
+    position: absolute;
+    width: 274px;
+    height: 38px;
+    left: 22%;
+    border-radius: 8px;
+    background: #b2beee;
+    color: whitesmoke;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.signbutn:hover {
+    color: white;
+    background-color: #A9BCFF;
+}

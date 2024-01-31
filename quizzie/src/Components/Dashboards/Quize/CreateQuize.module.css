@@ -1,0 +1,172 @@
+.blurbackground {
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    backdrop-filter: blur(4px);
+}
+
+
+.popup {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    height: 35%;
+    margin: 0 auto;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* filter:blur(8px); */
+
+}
+
+.input {
+    position: absolute;
+    width: 90%;
+    height: 25%;
+    top: 10%;
+    left: 5%;
+    border-radius: 10px;
+    border: #FFFFFF;
+    box-shadow: 0px 0px 25px 0px #00000026;
+    font-family: Poppins;
+font-size: 25px;
+font-weight: 500;
+line-height: 38px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+.inputerror{
+    position: absolute;
+    color: red;
+}
+.label{
+    font-family: Poppins;
+font-size: 25px;
+font-weight: 500;
+line-height: 38px;
+letter-spacing: 0em;
+text-align: center;
+width: 122px;
+height: 38px;
+color: #9F9F9F;
+}
+.butqna{
+    width: 171px;
+    height: 46px;
+    top: 467px;
+    left: 793px;
+    border-radius: 10px;
+    border: white;
+    background-color: white;
+    box-shadow: 0px 0px 25px 0px #00000026;
+    color: #9F9F9F;    
+}
+.butqnaslect{
+    width: 171px;
+    height: 46px;
+    top: 467px;
+    left: 793px;
+    border-radius: 10px;
+    border: white;
+    background-color: #60B84B;
+    box-shadow: 0px 0px 25px 0px #00000026;
+    color: white; 
+}
+.butpoll{
+    width: 171px;
+    height: 46px;
+    top: 467px;
+    left: 793px;
+    border-radius: 10px;
+    border: white;
+    background-color: white;
+    box-shadow: 0px 0px 25px 0px #00000026;
+    color: #9F9F9F;
+}
+.butpollslect{
+    width: 171px;
+    height: 46px;
+    top: 467px;
+    left: 793px;
+    border-radius: 10px;
+    border: white;
+    background-color: #60B84B;
+    box-shadow: 0px 0px 25px 0px #00000026;
+    color: white;
+}
+.qnapollbodr {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    height: 25%;
+    /* background-color: antiquewhite; */
+    top: 40%;
+    left: 5%;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.cancelbut {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 30%;
+    height: 46.14px;
+    border-radius: 10px;
+    border: white;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    box-shadow: 0px 0px 15px 0px #00000040;
+
+}
+
+.continuebut {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 30%;
+    height: 46.14px;
+    border-radius: 10px;
+    border: #60B84B;
+    background-color: #60B84B;
+    color: white;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    box-shadow: 0px 0px 15px 0px #00000040;
+}
+.butqna:hover{
+    background-color:#60B84B ;
+    color: white;
+    
+}
+.butpoll:hover{
+    background-color:#60B84B ;
+    color: white;
+    
+}
+.cancelbut:hover{
+    color: red;
+    box-shadow: 0px 0px 15px 0px white;
+}
