@@ -27,7 +27,6 @@ function Signup() {
                     name,
                     email,
                     password,
-                }, 
                 });    
                 console.log(response.data);   
                 if (response.data.status === 'SUCCESS') {
