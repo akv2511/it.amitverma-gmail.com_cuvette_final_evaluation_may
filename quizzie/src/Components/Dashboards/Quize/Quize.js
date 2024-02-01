@@ -39,12 +39,7 @@ function Quize(props) {
         setCurrentPage(index - 1);
         pageData.splice(index, 1);
         setPageData(pageData);
-    }
-    // const handleOptionInput = (optionIndex, event) => {
-    //     const updatedPageData = [...pageData];
-    //     updatedPageData[currentPage].options[optionIndex] = event.target.value;
-    //     setPageData(updatedPageData);
-    // };
+    }   
     const handleOptionInputBoth = (optionIndex, event, key) => {
         const updatedPageData = [...pageData];
         if (updatedPageData[currentPage].options[optionIndex] === undefined) {
@@ -70,12 +65,7 @@ function Quize(props) {
                 email: localStorage.getItem("email"),
                 timer: timer,
                 createdAt: Date.now(),
-            }, {
-                headers: {
-                    'Content-Type': 'application/json',
-                    Accept: 'application/json',
-                    'Access-Control-Allow-Origin': '*',
-                },
+            }, 
             });
     
             if (response.data.status === 'SUCCESS') {
