@@ -18,8 +18,7 @@ function Login() {
         if (!validateEmail(email) || password.length === 0) {
             setError(true);
         }else  {             
-            try  {
-                console.log("handleSignIn")
+            try  {                
             const response  =  await fetch('https://it-amitverma-server.vercel.app/api/loginUser/:path*', {
                 method: 'POST',
                 crossDomain: true,
