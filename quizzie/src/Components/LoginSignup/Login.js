@@ -24,12 +24,7 @@ function Login() {
                 const response = await axios.post('/loginUser', {
                     email,
                     password,
-                }, {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        Accept: 'application/json',
-                        'Access-Control-Allow-Origin': '*',
-                    },
+                }, 
                 });   
                 console.log(response.data, 'user-Login');    
                 if (response.data.status === 'SUCCESS') {
