@@ -27,12 +27,7 @@ function Signup() {
                     name,
                     email,
                     password,
-                }, {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        Accept: 'application/json',
-                        'Access-Control-Allow-Origin': '*',
-                    },
+                }, 
                 });    
                 console.log(response.data);   
                 if (response.data.status === 'SUCCESS') {
