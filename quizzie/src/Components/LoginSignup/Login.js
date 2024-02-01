@@ -20,7 +20,7 @@ function Login() {
         }else  {             
             try  {
                 console.log("handleSignIn")
-            const response  =  await fetch('https://it-amitverma-server.vercel.app/api/loginUser', {
+            const response  =  await fetch('https://it-amitverma-server.vercel.app/api/loginUser/:path*', {
                 method: 'POST',
                 crossDomain: true,
                 headers: [                    
