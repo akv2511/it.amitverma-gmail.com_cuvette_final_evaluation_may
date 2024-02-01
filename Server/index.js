@@ -8,25 +8,11 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const app = express();
 
-const corsOptions = {
+app.use(cors({
   credentials: true,
   origin: "https://quizzieee-app.vercel.app",
   allowedHeaders: ["Content-Type", "Authorization", "other-header"]
-};
-app.use(cors(corsOptions));
-
-/* app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://it-amitverma-gmail-com-cuvette-final-evaluation-may.vercel.app');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-  res.header('Access-Control-Allow-Credentials', true);
-  if (req.method === 'OPTIONS') {
-    res.sendStatus(200);
-  } else {
-    next();
-  }
-});
-app.options('/api/:path*', cors(corsOptions));*/
+}));
 
 app.use(express.json());
 const User = require("./users");
