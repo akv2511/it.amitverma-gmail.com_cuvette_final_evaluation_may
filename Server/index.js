@@ -10,7 +10,7 @@ const app = express();
 
 const corsOptions = {
   credentials: true,
-  origin: "https://quizzieee-app.vercel.app/",
+  origin: "https://quizzieee-app.vercel.app",
   allowedHeaders: ["Content-Type", "Authorization", "other-header"]
 };
 app.use(cors(corsOptions));
