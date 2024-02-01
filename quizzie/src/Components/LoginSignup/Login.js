@@ -23,17 +23,12 @@ function Login() {
             const response  =  await fetch('https://it-amitverma-server.vercel.app/api/loginUser', {
                 method: 'POST',
                 crossDomain: true,
-                headers: {
-                    'Content-Type': 'application/json',
-                    Accept: "application/json",
-                    "Access-Control-Allow-Origin": "*",
+                headers: [                    
                     { key: "Access-Control-Allow-Credentials", value: "true" },
                     { key: "Access-Control-Allow-Origin", value: "*" },
                     { key: "Access-Control-Allow-Methods", value: "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
-                    { key: "Access-Control-Allow-Headers", value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" },
-                
-                    
-                }, body: JSON.stringify({
+                    { key: "Access-Control-Allow-Headers", value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" },                   
+                ], body: JSON.stringify({
                     email,
                     password,
                 }),
