@@ -11,7 +11,7 @@ app.use(cors(
   {
     credentials: true,
     origin: "http://it-amitverma-gmail-com-cuvette-final-evaluation-may.vercel.app",
-    allowedHeaders: ["Content-Type", "Authorization", "other-header"],
+    allowedHeaders: ["Content-Type", "Authorization", "other-header", "Access-Control-Allow-Origin"],
   }
   
 ));
