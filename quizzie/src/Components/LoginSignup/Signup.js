@@ -23,7 +23,7 @@ function Signup() {
         } else {
             try {
                 // console.log("handleAddUser",)
-                const response = await fetch('http://it-amitverma-server.vercel.app/api/register', {
+                const response = await fetch('https://it-amitverma-server.vercel.app/api/register', {
                     method: 'POST',
                     crossDomain: true,
                     headers: {
