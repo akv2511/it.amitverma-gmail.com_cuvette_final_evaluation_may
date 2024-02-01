@@ -38,12 +38,13 @@ const isLoggedIn = (req, res, next) => {
     })
   }
 }
-const corsOptions = {
+app.use(
+  cors({
   credentials: true,
-  origin: "http://it-amitverma-gmail-com-cuvette-final-evaluation-may.vercel.app",
+  origin: "*",
   allowedHeaders: ["Content-Type", "Authorization", "other-header"]
-};
-app.use(cors(corsOptions));
+  })
+);
 app.post('/api/register', async (req, res) => {
   const { name, email, password } = req.body;
   const encryptedpassword = await bcrypt.hash(password, 10)
