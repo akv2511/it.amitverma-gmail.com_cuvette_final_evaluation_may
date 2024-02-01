@@ -1,6 +1,7 @@
 import styles from './Signup.module.css'
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 function Signup() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -15,46 +16,38 @@ function Signup() {
         return emailRegex.test(email);
     }
 
-
     const handleAddUser = async (event) => {
         event.preventDefault();
+    
         if (name.length === 0 || !validateEmail(email) || password.length === 0 || confirmpassword !== password) {
-            setError(true)
+            setError(true);
         } else {
             try {
-                // console.log("handleAddUser",)
-                const response = await fetch('https://it-amitverma-server.vercel.app/api/register', {
-                    method: 'POST',
-                    crossDomain: true,
+                const response = await axios.post('/register', {
+                    name,
+                    email,
+                    password,
+                }, {
                     headers: {
                         'Content-Type': 'application/json',
-                        Accept: "application/json",
-                       
+                        Accept: 'application/json',
+                        'Access-Control-Allow-Origin': '*',
                     },
-                    body: JSON.stringify({
-                        name,
-                        email,
-                        password,
-                    }),
-                })
-                    .then((res) => res.json())
-                    .then((respose) => {
-                        console.log(respose)
-                        if (respose.status === "SUCCESS") {
-                            console.log(respose, "userRegister")
-                            localStorage.setItem("token", respose.jwtToken);
-                            navigate('/dashboardhome')
-                        }else{
-                            setApiError(respose)
-                        }
-                    })
+                });    
+                console.log(response.data);   
+                if (response.data.status === 'SUCCESS') {
+                    console.log(response.data, 'userRegister');
+                    localStorage.setItem('token', response.data.jwtToken);
+                    navigate('/dashboardhome');
+                } else {
+                    setApiError(response.data);
+                }
             } catch (error) {
                 console.error('Error adding item:', error.message);
                 setResponse('Error adding item. Please try again.');
-            };
+            }
         }
     };
-
     return (
         <>
             <form onSubmit={handleAddUser} className={styles.signinform}>
