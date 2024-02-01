@@ -173,8 +173,14 @@ app.get("/health", (req, res) => {
   res.json("Server up & running");
 });
 
-app.listen(process.env.PORT, () => {
-  mongoose.connect(process.env.DBURL)
-    .then(() => console.log(`app listening on port http://localhost:${process.env.PORT}`))
-    .catch(() => console.log(error))
+mongoose.connect(process.env.DBURL)
+ .then(() => {
+    console.log("Connected to MONGODB");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+app.listen(process.env.PORT, () => {  
+    console.log(`app listening on port http://localhost:${process.env.PORT}`))   
 })
