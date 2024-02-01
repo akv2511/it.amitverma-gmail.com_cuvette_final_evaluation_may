@@ -7,14 +7,13 @@ dotenv.config();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const app = express();
-app.use(cors(
-  {
-    credentials: true,
-    origin: "http://it-amitverma-gmail-com-cuvette-final-evaluation-may.vercel.app",
-    allowedHeaders: ["Content-Type", "Authorization", "other-header","Access-Control-Allow-Origin"]
-  }
-  
-));
+const corsOptions = {
+  credentials: true,
+  origin: "http://it-amitverma-gmail-com-cuvette-final-evaluation-may.vercel.app",
+  allowedHeaders: ["Content-Type", "Authorization", "other-header"]
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 const User = require("./users");
