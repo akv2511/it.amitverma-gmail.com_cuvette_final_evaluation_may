@@ -22,7 +22,7 @@ function QuestionAnswerPage() {
     useEffect(() => {
         const fetchQuizById = async () => {
             try {
-                const response = await axios.get(`http://it-amitverma-server.vercel.app/api/quiz/${params.id}`);
+                const response = await axios.get(`/quiz/${params.id}`);
                 setQuiz(response.data);
             } finally {
                 setLoading(false);
