@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function QuizeLink({ quizId }) {
     const [copied, setCopied] = useState('');
-    const baseUrl = 'https://it-amitverma-gmail-com-cuvette-final-evaluation-may.vercel.app/quiz/';
+    const baseUrl = 'https://quizzieee-app.vercel.app/quiz/';
 
     const handleCopyClick = () => {
         navigator.clipboard.writeText(`${baseUrl}${quizId || ''}`)
