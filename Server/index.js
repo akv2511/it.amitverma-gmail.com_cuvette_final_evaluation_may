@@ -10,11 +10,12 @@ const app = express();
 
 const corsOptions = {
   credentials: true,
-  origin: "http://it-amitverma-gmail-com-cuvette-final-evaluation-may.vercel.app",
+  origin: "https://quizzieee-app.vercel.app/",
   allowedHeaders: ["Content-Type", "Authorization", "other-header"]
 };
 app.use(cors(corsOptions));
-app.use((req, res, next) => {
+
+/* app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'https://it-amitverma-gmail-com-cuvette-final-evaluation-may.vercel.app');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
@@ -25,7 +26,7 @@ app.use((req, res, next) => {
     next();
   }
 });
-app.options('/api/:path*', cors(corsOptions));
+app.options('/api/:path*', cors(corsOptions));*/
 
 app.use(express.json());
 const User = require("./users");
