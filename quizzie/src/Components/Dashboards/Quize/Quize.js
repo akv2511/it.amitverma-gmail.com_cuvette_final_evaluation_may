@@ -4,7 +4,7 @@ import plus from '../../../Assets/plus.png';
 import cross from '../../../Assets/charm_cross.png'
 import React from 'react'
 import QuizeLink from './QuizeLink';
-
+import axios from 'axios';
 function Quize(props) {
     // const [quesType, setQuesType] = useState("optionTypetxt");
     const [currentPage, setCurrentPage] = useState(0);
@@ -61,36 +61,32 @@ function Quize(props) {
     };
     const handelSubmitQuestion = async (e) => {
         e.preventDefault();
+    
         try {
-            const response = await fetch('http://it-amitverma-server.vercel.app/api/createQuiz', {
-                method: 'POST',
-                crossDomain: true,
+            const response = await axios.post('/createQuiz', {
+                quizName: props.quizData?.quizName,
+                quizType: props.quizData?.quizType,
+                questions: pageData,
+                email: localStorage.getItem("email"),
+                timer: timer,
+                createdAt: Date.now(),
+            }, {
                 headers: {
                     'Content-Type': 'application/json',
-                    Accept: "application/json",
-                   
+                    Accept: 'application/json',
+                    'Access-Control-Allow-Origin': '*',
                 },
-                body: JSON.stringify({
-                    quizName: props.quizData?.quizName,
-                    quizType: props.quizData?.quizType,
-                    questions: pageData,
-                    email: localStorage.getItem("email"),
-                    timer: timer,
-                    createdAt: Date.now(),
-                }),
-            })
-                .then((res) => res.json())
-                .then((respose) => {
-                    // console.log(respose)
-                    if (respose.status === "SUCCESS") {
-                        console.log(respose, "QuestionRegister")
-                    }
-                    setQuizId(respose.quizId)
-                })
+            });
+    
+            if (response.data.status === 'SUCCESS') {
+                console.log(response.data, 'QuestionRegister');
+            }
+    
+            setQuizId(response.data.quizId);
         } catch (error) {
             console.error('Error adding item:', error.message);
             setResponse('Error adding item. Please try again.');
-        };
+        }
     };
     console.log("pagedata", pageData)
     console.log("currentpage", currentPage)
