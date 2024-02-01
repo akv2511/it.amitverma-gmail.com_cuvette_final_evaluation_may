@@ -19,7 +19,7 @@ function Login() {
             setError(true);
         }else  {             
             try  {                
-            const response  =  await fetch('https://it-amitverma-server.vercel.app/api/loginUser', {
+            const response  =  await fetch('/loginUser', {
                 method: 'POST',
                 crossDomain: true,
                 headers:    
