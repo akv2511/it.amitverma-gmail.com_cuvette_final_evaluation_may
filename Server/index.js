@@ -182,5 +182,5 @@ mongoose.connect(process.env.DBURL)
   });
 
 app.listen(process.env.PORT, () => {  
-    console.log(`app listening on port http://localhost:${process.env.PORT}`))   
-})
+    console.log(`app listening on port http://localhost:${process.env.PORT}`);
+});
