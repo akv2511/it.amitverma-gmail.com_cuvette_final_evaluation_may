@@ -7,12 +7,7 @@ dotenv.config();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const app = express();
-const corsOptions = {
-  credentials: true,
-  origin: "http://it-amitverma-gmail-com-cuvette-final-evaluation-may.vercel.app",
-  allowedHeaders: ["Content-Type", "Authorization", "other-header"]
-};
-app.use(cors(corsOptions));
+
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'https://it-amitverma-gmail-com-cuvette-final-evaluation-may.vercel.app');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
@@ -43,6 +38,12 @@ const isLoggedIn = (req, res, next) => {
     })
   }
 }
+const corsOptions = {
+  credentials: true,
+  origin: "http://it-amitverma-gmail-com-cuvette-final-evaluation-may.vercel.app",
+  allowedHeaders: ["Content-Type", "Authorization", "other-header"]
+};
+app.use(cors(corsOptions));
 app.post('/api/register', async (req, res) => {
   const { name, email, password } = req.body;
   const encryptedpassword = await bcrypt.hash(password, 10)
