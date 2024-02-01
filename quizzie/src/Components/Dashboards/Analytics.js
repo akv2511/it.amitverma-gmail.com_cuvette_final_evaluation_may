@@ -11,7 +11,7 @@ function Analytics({ quizData, refreshData }) {
   const data = quizData;
   
   const handelDelete = (id) => {      
-    axios.delete(`http://it-amitverma-server.vercel.app/api/quiz/${id}`)
+    axios.delete(`/quiz/${id}`)
       .then(response => refreshData(true))
       .catch(error => console.error(error));  
       setSelected(null) 
