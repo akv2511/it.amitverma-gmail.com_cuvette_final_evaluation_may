@@ -40,7 +40,7 @@ const isLoggedIn = (req, res, next) => {
 }
 const corsOptions = {
   credentials: true,
-  origin: "*",
+  origin: "http://it-amitverma-gmail-com-cuvette-final-evaluation-may.vercel.app",
   allowedHeaders: ["Content-Type", "Authorization", "other-header"]
 };
 app.use(cors(corsOptions));
