@@ -166,11 +166,12 @@ app.delete('/api/quiz/:quizId', async (req, res) => {
     }
   } catch (error) {
     res.json('Error deleting quiz:', error);
-  }
-  
+  }  
 });
 
-
+app.get("/health", (req, res) => {
+  res.json("Server up & running");
+});
 
 app.listen(process.env.PORT, () => {
   mongoose.connect(process.env.DBURL)
