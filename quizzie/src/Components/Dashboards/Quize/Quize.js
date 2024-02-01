@@ -65,7 +65,6 @@ function Quize(props) {
                 email: localStorage.getItem("email"),
                 timer: timer,
                 createdAt: Date.now(),
-            }, 
             });
     
             if (response.data.status === 'SUCCESS') {
