@@ -49,7 +49,7 @@ app.post('/api/register', async (req, res) => {
         status: "SUCCESS",
         message: 'User Signed up sucessfully',
         jwtToken,
-        email
+        email,
       });
     }
   } catch (error) {
