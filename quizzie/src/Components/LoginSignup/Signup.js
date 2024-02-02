@@ -32,6 +32,7 @@ function Signup() {
                 if (response.data.status === 'SUCCESS') {
                     console.log(response.data, 'userRegister');
                     localStorage.setItem('token', response.data.jwtToken);
+                    localStorage.setItem('email', response.data.email);
                     navigate('/dashboardhome');
                 } else {
                     setApiError(response.data);
