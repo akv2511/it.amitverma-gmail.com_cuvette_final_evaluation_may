@@ -48,7 +48,8 @@ app.post('/api/register', async (req, res) => {
       res.json({
         status: "SUCCESS",
         message: 'User Signed up sucessfully',
-        jwtToken
+        jwtToken,
+        email
       });
     }
   } catch (error) {
