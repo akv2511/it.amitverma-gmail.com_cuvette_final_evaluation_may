@@ -7,7 +7,8 @@ function QuizeLink({ quizId }) {
     const baseUrl = 'https://quizzieee-app.vercel.app/quiz/';
 
     const handleCopyClick = () => {
-        navigator.clipboard.writeText(`${baseUrl}${quizId || ''}`)
+        navigator.clipboard.writeText(`${baseUrl}${quizId || ''}`);
+        showToastMessage,
     };
 
 
@@ -22,10 +23,9 @@ function QuizeLink({ quizId }) {
                 <div className={styles.popup}>
                     <h1 className={styles.heading}>Congrats your Quiz is Published!</h1>
                     <input className={styles.link} id="quizInput" type='text' onChange={(e) => setCopied(e.target.value)} value={`${baseUrl}${quizId || ''}`} readOnly  ></input>
-                    <button className={styles.copylinkbutn} onClick=()=>({
-                        showToastMessage,
-                        handleCopyClick,
-                    })>Share</button>
+                    <button className={styles.copylinkbutn} onClick={handleCopyClick}                     
+                        
+                    >Share</button>
                     {copied && <p>Copied to clipboard!</p>}
                     <ToastContainer />
                 </div>
