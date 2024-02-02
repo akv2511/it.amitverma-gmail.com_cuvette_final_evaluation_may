@@ -8,7 +8,7 @@ function QuizeLink({ quizId }) {
 
     const handleCopyClick = () => {
         navigator.clipboard.writeText(`${baseUrl}${quizId || ''}`);
-        showToastMessage,
+        showToastMessage(),
     };
 
 
@@ -26,7 +26,7 @@ function QuizeLink({ quizId }) {
                     <button className={styles.copylinkbutn} onClick={handleCopyClick}                     
                         
                     >Share</button>
-                    {copied && <p>Copied to clipboard!</p>}
+                    {copied }
                     <ToastContainer />
                 </div>
             </div>
