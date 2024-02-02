@@ -2,13 +2,18 @@ import { useState } from 'react';
 import styles from './QuizeLink.module.css';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from 'react-router-dom';
 function QuizeLink({ quizId }) {
     const [copied, setCopied] = useState('');
+    const navigate = useNavigate();
     const baseUrl = 'https://quizzieee-app.vercel.app/quiz/';
 
     const handleCopyClick = () => {
         navigator.clipboard.writeText(`${baseUrl}${quizId || ''}`)
         showToastMessage();
+        setTimeout(() => {
+            navigate("/dashboardHome")                
+            }, 5000);
     };
 
 
