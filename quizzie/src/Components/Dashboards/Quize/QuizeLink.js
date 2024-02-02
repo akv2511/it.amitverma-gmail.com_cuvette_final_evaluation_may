@@ -10,13 +10,12 @@ function QuizeLink({ quizId }) {
 
     const handleCopyClick = () => {
         navigator.clipboard.writeText(`${baseUrl}${quizId || ''}`)
-        showToastMessage();
-        setTimeout(() => {
-            navigate("/dashboardHome")                
-            }, 5000);
+        showToastMessage();        
     };
 
-
+ const handelBacktoDashboard = () => {
+        navigate("/dashboardHome")
+    }
     const showToastMessage = () => {
         toast.success("Link copied to Clipboard", {
             className: "toastmessage",
@@ -24,7 +23,7 @@ function QuizeLink({ quizId }) {
     };
     return (
         <>
-            <div  className={styles.blurbackground}>
+            <div onBlur={handelBacktoDashboard}  className={styles.blurbackground}>
                 <div className={styles.popup}>
                     <h1 className={styles.heading}>Congrats your Quiz is Published!</h1>
                     <input className={styles.link} id="quizInput" type='text' onChange={(e) => setCopied(e.target.value)} value={`${baseUrl}${quizId || ''}`} readOnly  ></input>
