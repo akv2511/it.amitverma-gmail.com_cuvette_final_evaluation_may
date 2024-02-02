@@ -7,7 +7,7 @@ function QuizeLink({ quizId }) {
     const baseUrl = 'https://quizzieee-app.vercel.app/quiz/';
 
     const handleCopyClick = () => {
-        navigator.clipboard.writeText(`${baseUrl}${quizId || ''}`);
+        navigator.clipboard.writeText(copied);
         showToastMessage(),
     };
 
