@@ -19,7 +19,7 @@ function QuizeLink({ quizId }) {
     };
     return (
         <>
-            <div onBlur={"/dashboardhome"} className={styles.blurbackground}>
+            <div  className={styles.blurbackground}>
                 <div className={styles.popup}>
                     <h1 className={styles.heading}>Congrats your Quiz is Published!</h1>
                     <input className={styles.link} id="quizInput" type='text' onChange={(e) => setCopied(e.target.value)} value={`${baseUrl}${quizId || ''}`} readOnly  ></input>
